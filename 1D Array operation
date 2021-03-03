@@ -1,0 +1,38 @@
+public class arrayOpration {
+  //insert the value at first position
+    public static void insertFirst(int a[],int value){
+        for (int i = a.length-1; i >0 ; i--) {
+            a[i]=a[i-1];
+        }
+        a[0]=value;
+    }
+    //print the array
+    public static void print(int a[]){
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i]+" ");
+        }
+    }
+    
+    // insert the value at any given specific positions
+    public static void insertAtAnyPosison(int a[],int pos,int value){
+        for (int i = a.length-1; i>pos-1; i--) {
+            a[i]=a[i-1];
+        }
+        a[pos-1]=value;
+    }
+    // main merhod
+    public static void main(String[] args) {
+        arrayOpration obj=new arrayOpration();//Creating an object
+        int a[]=new int[5];
+        a[0]=2;
+        a[1]=4;
+        a[2]=6;
+        a[3]=8;
+        a[4]=9;
+        // calling the method
+      /* obj.print(a);
+       obj.insertFirst(a,7);
+        obj.insertAtAnyPosison(a,5,5);
+        obj.print(a); */
+    }
+}
